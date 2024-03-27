@@ -6,13 +6,13 @@ import os
 
 haar_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
-images = r'C:\Users\chand\OneDrive\Pictures\Camera Roll\id_pictures'
+path_to_images = r'C:\Users\chand\OneDrive\Pictures\Camera Roll\id_pictures'
 
 embeddings = []
 
-for filename in os.listdir(images):
+for filename in os.listdir(path_to_images):
     print(filename)
-    img = cv2.imread(os.path.join(images, filename), 0)
+    img = cv2.imread(os.path.join(path_to_images, filename), 0)
 
     gray_img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
 
