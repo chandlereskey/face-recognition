@@ -48,5 +48,3 @@ while rval:
     cv2.imshow('preview', frame)
 
 vc.release()
-
-print('found individual!!')
