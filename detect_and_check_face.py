@@ -9,7 +9,7 @@ from sklearn.metrics import pairwise_distances_argmin_min
 haar_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 vc = cv2.VideoCapture(0)
-cv2.namedWindow("preview")
+cv2.namedWindow("face-video")
 
 
 if vc.isOpened():
@@ -45,6 +45,6 @@ while rval:
             cv2.putText(frame, 'Chandler', (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36,255,12), 2)
         else:
             cv2.putText(frame, 'not chandler', (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36,255,12), 2)
-    cv2.imshow('preview', frame)
+    cv2.imshow('face-video', frame)
 
 vc.release()
